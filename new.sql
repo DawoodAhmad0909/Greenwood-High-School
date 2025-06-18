@@ -250,13 +250,65 @@ SELECT student_id, CONCAT(first_name,' ',last_name) AS Student_Name,guardian_nam
 
 -- 16. Calculate the average grade for each course.
 SELECT 
-	Average_marks,
-    c.course_name
+	c.course_name,
+	CASE
+		WHEN AVG(CASE grade
+			WHEN 'A' THEN 4.0 WHEN 'A-' THEN 3.7 WHEN 'B+' THEN 3.3 WHEN 'B' THEN 3.0 WHEN 'B-' THEN 2.7 
+            WHEN 'C+' THEN 2.3 WHEN 'C' THEN 2.0 WHEN 'C-' THEN 1.7 WHEN 'D+' THEN 1.3 WHEN 'D' THEN 1.0
+            ELSE 0
+		END)>= 3.9  THEN 'A'
+        WHEN AVG(CASE grade
+			WHEN 'A' THEN 4.0 WHEN 'A-' THEN 3.7 WHEN 'B+' THEN 3.3 WHEN 'B' THEN 3.0 WHEN 'B-' THEN 2.7 
+            WHEN 'C+' THEN 2.3 WHEN 'C' THEN 2.0 WHEN 'C-' THEN 1.7 WHEN 'D+' THEN 1.3 WHEN 'D' THEN 1.0
+            ELSE 0
+		END)>= 3.7  THEN 'A-'
+        WHEN AVG(CASE grade
+			WHEN 'A' THEN 4.0 WHEN 'A-' THEN 3.7 WHEN 'B+' THEN 3.3 WHEN 'B' THEN 3.0 WHEN 'B-' THEN 2.7 
+            WHEN 'C+' THEN 2.3 WHEN 'C' THEN 2.0 WHEN 'C-' THEN 1.7 WHEN 'D+' THEN 1.3 WHEN 'D' THEN 1.0
+            ELSE 0
+		END)>= 3.3  THEN 'B+'
+        WHEN AVG(CASE grade
+			WHEN 'A' THEN 4.0 WHEN 'A-' THEN 3.7 WHEN 'B+' THEN 3.3 WHEN 'B' THEN 3.0 WHEN 'B-' THEN 2.7 
+            WHEN 'C+' THEN 2.3 WHEN 'C' THEN 2.0 WHEN 'C-' THEN 1.7 WHEN 'D+' THEN 1.3 WHEN 'D' THEN 1.0
+            ELSE 0
+		END)>= 3.0  THEN 'B'
+        WHEN AVG(CASE grade
+			WHEN 'A' THEN 4.0 WHEN 'A-' THEN 3.7 WHEN 'B+' THEN 3.3 WHEN 'B' THEN 3.0 WHEN 'B-' THEN 2.7 
+            WHEN 'C+' THEN 2.3 WHEN 'C' THEN 2.0 WHEN 'C-' THEN 1.7 WHEN 'D+' THEN 1.3 WHEN 'D' THEN 1.0
+            ELSE 0
+		END)>= 2.7  THEN 'B-'
+        WHEN AVG(CASE grade
+			WHEN 'A' THEN 4.0 WHEN 'A-' THEN 3.7 WHEN 'B+' THEN 3.3 WHEN 'B' THEN 3.0 WHEN 'B-' THEN 2.7 
+            WHEN 'C+' THEN 2.3 WHEN 'C' THEN 2.0 WHEN 'C-' THEN 1.7 WHEN 'D+' THEN 1.3 WHEN 'D' THEN 1.0
+            ELSE 0
+		END)>= 2.3  THEN 'C+'
+        WHEN AVG(CASE grade
+			WHEN 'A' THEN 4.0 WHEN 'A-' THEN 3.7 WHEN 'B+' THEN 3.3 WHEN 'B' THEN 3.0 WHEN 'B-' THEN 2.7 
+            WHEN 'C+' THEN 2.3 WHEN 'C' THEN 2.0 WHEN 'C-' THEN 1.7 WHEN 'D+' THEN 1.3 WHEN 'D' THEN 1.0
+            ELSE 0
+		END)>= 2.0  THEN 'C'
+        WHEN AVG(CASE grade
+			WHEN 'A' THEN 4.0 WHEN 'A-' THEN 3.7 WHEN 'B+' THEN 3.3 WHEN 'B' THEN 3.0 WHEN 'B-' THEN 2.7 
+            WHEN 'C+' THEN 2.3 WHEN 'C' THEN 2.0 WHEN 'C-' THEN 1.7 WHEN 'D+' THEN 1.3 WHEN 'D' THEN 1.0
+            ELSE 0
+		END)>= 1.7  THEN 'C-'
+        WHEN AVG(CASE grade
+			WHEN 'A' THEN 4.0 WHEN 'A-' THEN 3.7 WHEN 'B+' THEN 3.3 WHEN 'B' THEN 3.0 WHEN 'B-' THEN 2.7 
+            WHEN 'C+' THEN 2.3 WHEN 'C' THEN 2.0 WHEN 'C-' THEN 1.7 WHEN 'D+' THEN 1.3 WHEN 'D' THEN 1.0
+            ELSE 0
+		END)>= 1.3  THEN 'D+'
+        WHEN AVG(CASE grade
+			WHEN 'A' THEN 4.0 WHEN 'A-' THEN 3.7 WHEN 'B+' THEN 3.3 WHEN 'B' THEN 3.0 WHEN 'B-' THEN 2.7 
+            WHEN 'C+' THEN 2.3 WHEN 'C' THEN 2.0 WHEN 'C-' THEN 1.7 WHEN 'D+' THEN 1.3 WHEN 'D' THEN 1.0
+            ELSE 0
+		END)>= 1.0  THEN 'D'
+		ELSE 'F'
+	END AS Average_grade
 FROM Enrollments e
 JOIN Courses c 
 ON c.course_id=e.course_id
 GROUP BY c.course_name
-ORDER BY AVG(e.grade);
+ORDER BY Average_Grade;
 
 -- 17. Count how many students are enrolled in each course.
 SELECT 
@@ -277,7 +329,7 @@ JOIN Courses c
 ON c.course_id=e.course_id
 GROUP BY c.department
 ORDER BY Total_Enrollments DESC
-LIMIT 3;
+LIMIT 2;
 
 -- 19. Show the distribution of grades across all enrollments.
 SELECT grade, COUNT(*) AS Total_Enrollments FROM Enrollments
