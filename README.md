@@ -1,7 +1,16 @@
 # Greenwood-High-School
-##Overview
-##### Database:GWHS_db
+## Overview
+#### Database:GWHS_db
+This SQL project models a comprehensive school management system for GWHS (Government Women High School). It establishes the foundational structure of a relational database using PostgreSQL, comprising five core tables: Students, Courses, Teachers, Enrollments, and Class_schedule. The schema is designed to capture essential educational operations such as course registrations, grade assignments, teacher allocations, and class timings.
 ## Objectives 
+##### 1. Design a relational database to model a school system with normalized and interconnected entities.
+##### 2. Store and manage student data, including demographics, course enrollments, and grades.
+##### 3. Capture teacher and course associations including class scheduling information.
+##### 4. Implement meaningful SQL queries to:
+•Retrieve specific academic information.
+•Analyze student performance.
+•Track teacher assignments and scheduling.
+•Identify top-performing students and course-wise grade distributions.
 ## Creating Database 
 ``` sql
 CREATE DATABASE GWHS_db;
@@ -283,3 +292,7 @@ ON c.course_id=e.course_id
 GROUP BY Student_Name
 ORDER BY Student_Name;
 ```
+## Conclusion
+This project successfully demonstrates the practical application of relational database design and SQL for managing a school system. By implementing a well-structured schema and executing a diverse set of queries, the project showcases how institutions like GWHS can benefit from automated, data-driven decision-making. Key functionalities such as GPA calculations, enrollment analysis, and course scheduling are efficiently handled. This SQL-based solution lays a solid foundation for scaling further into more advanced features such as attendance tracking, parent communication, and student progress dashboards.
+
+
