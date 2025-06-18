@@ -1,0 +1,31 @@
+Student_Name,course_name,enrollment_id,student_id,course_id,enrollment_date,grade
+"John Smith",Mathematics,1,1001,101,2023-09-01,A
+"David Jones",Mathematics,9,1005,101,2023-09-01,B
+"Matthew Anderson",Mathematics,21,1011,101,2023-09-01,B+
+"Emily Johnson","English Literature",3,1002,102,2023-09-01,A-
+"Jessica Garcia","English Literature",11,1006,102,2023-09-01,A
+"Ava Thomas","English Literature",23,1012,102,2023-09-01,B
+"John Smith",Physics,2,1001,103,2023-09-01,B+
+"Daniel Martinez",Physics,13,1007,103,2023-09-01,C
+"Matthew Anderson",Physics,22,1011,103,2023-09-01,A
+"Emily Johnson",History,4,1002,104,2023-09-01,B
+"Olivia Davis",History,15,1008,104,2023-09-01,A
+"Ava Thomas",History,24,1012,104,2023-09-01,C+
+"Michael Williams","Computer Science",5,1003,105,2023-09-01,A
+"Daniel Martinez","Computer Science",14,1007,105,2023-09-01,B-
+"Andrew Taylor","Computer Science",25,1013,105,2023-09-01,A-
+"Sarah Brown",Biology,7,1004,106,2023-09-01,B+
+"Olivia Davis",Biology,16,1008,106,2023-09-01,B
+"Isabella Moore",Biology,27,1014,106,2023-09-01,A
+"Michael Williams",Chemistry,6,1003,107,2023-09-01,C+
+"Ethan Rodriguez",Chemistry,17,1009,107,2023-09-01,A-
+"Andrew Taylor",Chemistry,26,1013,107,2023-09-01,B
+"Sarah Brown",Economics,8,1004,108,2023-09-01,A-
+"Ethan Rodriguez",Economics,18,1009,108,2023-09-01,B+
+"Isabella Moore",Economics,28,1014,108,2023-09-01,B+
+"Jessica Garcia",Art,12,1006,109,2023-09-01,B+
+"Sophia Wilson",Art,19,1010,109,2023-09-01,A
+"James Jackson",Art,29,1015,109,2023-09-01,C
+"David Jones","Physical Education",10,1005,110,2023-09-01,A
+"Sophia Wilson","Physical Education",20,1010,110,2023-09-01,A
+"James Jackson","Physical Education",30,1015,110,2023-09-01,A

@@ -1,0 +1,11 @@
+teacher_id,first_name,last_name,department,hire_date,email,phone,Years_of_Service
+505,Thomas,Anderson,Technology,2016-07-12,t.anderson@school.edu,555-2005,8
+503,James,Wilson,Science,2017-09-10,j.wilson@school.edu,555-2003,7
+509,Daniel,Martin,Sports,2017-08-25,d.martin@school.edu,555-2009,7
+501,Robert,Miller,Science,2018-08-15,r.miller@school.edu,555-2001,6
+502,Lisa,Davis,Humanities,2019-01-20,l.davis@school.edu,555-2002,6
+506,Patricia,Jackson,"Social Sciences",2018-11-30,p.jackson@school.edu,555-2006,6
+507,Richard,White,Science,2019-04-22,r.white@school.edu,555-2007,6
+504,Jennifer,Taylor,Arts,2020-03-05,j.taylor@school.edu,555-2004,5
+510,Nancy,Thompson,Arts,2020-05-14,n.thompson@school.edu,555-2010,5
+508,Susan,Harris,Humanities,2021-02-18,s.harris@school.edu,555-2008,4

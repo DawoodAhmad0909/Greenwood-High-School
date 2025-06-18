@@ -1,0 +1,7 @@
+student_id,first_name,last_name,date_of_birth,gender,address,enrollment_date,email,phone,guardian_name
+1003,Michael,Williams,2004-11-30,Male,"789 Pine Rd, Somerville",2023-09-01,NULL,555-1003,"James Williams"
+1007,Daniel,Martinez,2004-12-08,Male,"159 Birch St, Quincy",2023-09-01,NULL,555-1007,"Carlos Martinez"
+1010,Sophia,Wilson,2006-05-19,Female,"426 Oak St, Arlington",2023-09-01,NULL,555-1010,"Patricia Wilson"
+1013,Andrew,Taylor,2005-06-15,Male,"258 Maple Ln, Belmont",2023-09-01,NULL,555-1013,"Paul Taylor"
+1016,Charlotte,White,2007-04-17,Female,"147 Walnut St, Framingham",2023-09-01,NULL,555-1016,"Laura White"
+1019,Alexander,Lee,2004-07-06,Male,"963 Elm Ave, Milton",2023-09-01,NULL,555-1019,"Edward Lee"

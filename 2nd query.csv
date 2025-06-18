@@ -1,0 +1,5 @@
+course_id,course_name,course_code,department,credit_hours,description
+101,Mathematics,MATH101,Science,4,"Algebra and Calculus fundamentals"
+103,Physics,PHY103,Science,4,"Mechanics, thermodynamics, and electromagnetism"
+106,Biology,BIO106,Science,4,"Cell biology, genetics, and ecology"
+107,Chemistry,CHE107,Science,4,"Organic and inorganic chemistry principles"
